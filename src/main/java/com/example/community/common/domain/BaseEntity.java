@@ -19,7 +19,7 @@ public class BaseEntity {
     @Id
     @Column(name = "ID")
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
-    private Long id;
+    private Integer id;
 
     @CreatedDate
     @Column(updatable = false)
@@ -30,9 +30,9 @@ public class BaseEntity {
 
     @CreatedBy
     @Column(updatable = false)
-    private Long creator;
+    private Integer creator;
 
     @LastModifiedBy
-    private Long updater;
+    private Integer updater;
 
 }
