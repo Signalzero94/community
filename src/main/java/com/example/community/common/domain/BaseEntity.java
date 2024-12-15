@@ -22,17 +22,19 @@ public class BaseEntity {
     private Integer id;
 
     @CreatedDate
-    @Column(updatable = false)
+    @Column(updatable = false, name = "CREATED_AT")
     private LocalDateTime createdAt;
 
     @LastModifiedDate
+    @Column(name = "UPDATED_AT")
     private LocalDateTime updatedAt;
 
     @CreatedBy
-    @Column(updatable = false)
+    @Column(updatable = false, name = "CREATOR")
     private Integer creator;
 
     @LastModifiedBy
+    @Column(name = "UPDATER")
     private Integer updater;
 
 }
